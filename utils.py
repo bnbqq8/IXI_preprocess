@@ -74,7 +74,6 @@ class Registration:
     def bspline_tx_init(self, fixed_img):
         transformDomainMeshSize = [2] * 3
         tx = sitk.BSplineTransformInitializer(fixed_img, transformDomainMeshSize)
-        print(f"Initial Number of Parameters: {tx.GetNumberOfParameters()}")
         self.bspline_reg.SetInitialTransformAsBSpline(
             tx, inPlace=True, scaleFactors=[1, 2, 5]
         )
