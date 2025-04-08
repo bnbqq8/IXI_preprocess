@@ -50,7 +50,9 @@ tar_dir = Path("../IXI_dataset/IXI_registrated")
 seqs = ["T2", "PD", "T1"]
 
 
-for subject in (pbar := tqdm((root_dir / "IXI-T2").iterdir())):
+for subject in (
+    pbar := tqdm(sorted((root_dir / "IXI-T2").iterdir(), key=lambda x: x.name)[200:])
+):
     pbar.set_description_str(f"Resampling")
     pbar.set_postfix_str(subject.name)
     subject_prefix = subject.name.split("-T2.nii.gz")[0]
