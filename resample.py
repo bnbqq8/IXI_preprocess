@@ -92,7 +92,7 @@ for subject in (
         if seq == "T2":
             fixed_img = _img
     # registration
-    pbar.set_description_str(f"Registration")
-    tmp, registered_img = registrator(moving_img, fixed_img)
-    sitk.WriteImage(tmp, str(subject_tar_dir / f"T1_affine_tmp.nii.gz"))
-    sitk.WriteImage(registered_img, str(subject_tar_dir / f"T1_bspline.nii.gz"))
+    # pbar.set_description_str(f"Registration")
+    # tmp, registered_img = registrator(moving_img, fixed_img)
+    # sitk.WriteImage(tmp, str(subject_tar_dir / f"T1_affine_tmp.nii.gz"))
+    # sitk.WriteImage(registered_img, str(subject_tar_dir / f"T1_bspline.nii.gz"))

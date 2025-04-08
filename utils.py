@@ -29,6 +29,9 @@ def command_multi_iteration(method):
     print("--------- Resolution Changing ---------")
 
 
+# def affine_moving_to_fixed(moving_img, fixed_img):
+
+
 class Registration:
     def __init__(self):
         self.affine_reg_init()
